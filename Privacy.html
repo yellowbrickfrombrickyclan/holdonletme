@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hold on let me | Privacy Policy</title>
+    <title>so then when | Privacy Policy</title>
     <style>
         :root {
             --bg-color: #0f111a;
@@ -31,116 +31,59 @@
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            border-top: 5px solid #57f287; /* Green for Privacy/Safety */
+            border-top: 5px solid #57f287;
         }
 
-        h1 {
-            color: #57f287;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            border-bottom: 1px solid #333;
-            padding-bottom: 10px;
-            margin-top: 30px;
-            color: var(--accent-color);
-        }
-
-        .date {
-            font-style: italic;
-            color: var(--muted-text);
-            margin-bottom: 30px;
-        }
-
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background: var(--highlight);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .data-table th, .data-table td {
+        h1 { color: #57f287; font-size: 2.5rem; margin-bottom: 10px; }
+        h2 { border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 30px; color: var(--accent-color); }
+        
+        .snark-note {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px dashed var(--muted-text);
             padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #3d415f;
+            margin: 20px 0;
+            font-size: 0.85rem;
+            color: #ccc;
         }
 
-        .data-table th {
-            background: #23263a;
-            color: #57f287;
-        }
-
-        footer {
-            margin-top: 50px;
-            text-align: center;
-            font-size: 0.8rem;
-            color: #555;
-        }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        
+        footer { margin-top: 50px; text-align: center; font-size: 0.8rem; color: #555; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <h1>Privacy Policy</h1>
-    <p class="date">Effective Date: February 26, 2026</p>
+    <p><strong>Effective Date:</strong> February 26, 2026</p>
 
-    <p>Look, <strong>hold on let me</strong> isn't a spy bot, but it does have a memory. Here is exactly what we do with your data so you don't have to wonder.</p>
+    <div class="snark-note">
+        "if you're reading this, you probably used a command and now you're paranoid. relax."
+    </div>
 
-    <h2>1. Data We Collect</h2>
-    <table class="data-table">
-        <thead>
-            <tr>
-                <th>Data Type</th>
-                <th>Source</th>
-                <th>Purpose</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>User IDs</strong></td>
-                <td>Discord API</td>
-                <td>To know who is who when saving memories.</td>
-            </tr>
-            <tr>
-                <td><strong>Custom Notes</strong></td>
-                <td><code>/remember</code> command</td>
-                <td>Stored in <code>user_data.json</code> so the bot can "shout" them back.</td>
-            </tr>
-            <tr>
-                <td><strong>Deleted Messages</strong></td>
-                <td>Discord Gateway</td>
-                <td>Processed instantly for the "Snipe Roast." <strong>We do not save these to a database.</strong></td>
-            </tr>
-        </tbody>
-    </table>
+    <h2>1. Data Collection</h2>
+    <p>We store User IDs and any text you provide via the <code>/remember</code> command. This is saved in a local file called <code>user_data.json</code>.</p>
 
-    <h2>2. How We Use Data</h2>
+    <h2>2. Data Usage</h2>
+    <p>This data is used to make the bot shout your "memories" back at you and to identify your rank. We do not sell this data because nobody would buy your mid thoughts anyway.</p>
+
+    <h2>3. Developer Access</h2>
+    <p><strong>The Developer (Owner) has full access to the <code>user_data.json</code> file.</strong> This access is used for:</p>
     <ul>
-        <li><strong>Functionality:</strong> We only store data required to make the bot's features work.</li>
-        <li><strong>No Selling:</strong> We do not sell, trade, or give your data to third parties. That's weird and we're not doing it.</li>
-        <li><strong>No Tracking:</strong> We don't track your activity across servers or build a "profile" on you.</li>
+        <li>Ensuring the bot isn't being used to store illegal content.</li>
+        <li>Debugging and technical maintenance.</li>
+        <li>and because some of them are genuinely hilarious.</li>
     </ul>
 
-    <h2>3. Data Retention</h2>
-    <p>Your "Memory" (from the remember command) stays in our <code>user_data.json</code> file until:</p>
-    <ul>
-        <li>You overwrite it with a new <code>/remember</code> command.</li>
-        <li>The bot owner manually clears the database.</li>
-        <li>The bot is kicked from the server (this may not auto-delete data, see Section 4).</li>
-    </ul>
+    <h2>4. Message Snipping</h2>
+    <p>When you delete a message, the bot sees it and roasts you. We do <strong>not</strong> save these deleted messages to a permanent database; they are only used for the immediate response.</p>
 
-    <h2>4. Your Rights (Data Deletion)</h2>
-    <p>If you want us to wipe your data from the <code>user_data.json</code> file, you have the right to ask. Currently, you can manually clear your note by remembering something empty, or you can contact the developer directly via Discord.</p>
-
-    <h2>5. Security</h2>
-    <p>Data is stored in a JSON file on a private server. While we take reasonable steps to keep it safe, remember that no file is 100% unhackable. Don't store your passwords or credit card numbers in the <code>/remember</code> command—that would be a major skill issue.</p>
+    <h2>5. Data Deletion</h2>
+    <p>If you want your data wiped from the JSON file, just use the command to overwrite it or contact the developer. We'll clear it out unless we're busy playing Bee Swarm Simulator.</p>
 
     <footer>
-        <p>&copy; 2026 hold on let me Bot | Powered by Discordia</p>
-        <p><em>"loading privacy... 99 percent... error: user too cool to be tracked"</em></p>
+        <p>&copy; 2026 so then when | <a href="index.html" style="color: #57f287; text-decoration: none;">Return to Home</a></p>
     </footer>
 </div>
 
